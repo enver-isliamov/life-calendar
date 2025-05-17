@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import LifeCalendar from "./LifeCalendar";
 
 // Главный компонент приложения
 function App() {

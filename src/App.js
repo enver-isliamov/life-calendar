@@ -1,22 +1,22 @@
+// Главный компонент приложения Life Calendar
 import React, { useState } from "react";
 import "./App.css";
 import LifeCalendar from "./LifeCalendar";
 
-// Главный компонент приложения
 function App() {
   // Состояния для персонализации
   const [surname, setSurname] = useState("Фамилия");
   const [motto, setMotto] = useState("Мотивирующая фраза");
-  const [shape, setShape] = useState("circle"); // форма ячеек
-  const [mode, setMode] = useState("single"); // single или couple
+  const [shape, setShape] = useState("circle"); // форма ячеек: "circle" или "rounded"
+  const [mode, setMode] = useState("single"); // режим: "single" (один человек) или "couple" (пара)
 
-  // Для пары - даты рождения и имена
+  // Данные для первого и второго человека (для режима пары)
   const [person1, setPerson1] = useState({ name: "Партнер 1", dob: "1990-01-01" });
   const [person2, setPerson2] = useState({ name: "Партнер 2", dob: "1992-01-01" });
 
   return (
     <div className="container">
-      {/* Фамилия */}
+      {/* Ввод фамилии (отображается сверху) */}
       <input
         className="surname"
         value={surname}
@@ -24,7 +24,7 @@ function App() {
         placeholder="Введите фамилию"
       />
 
-      {/* Переключатель режима */}
+      {/* Переключатель режима: для одного или для пары */}
       <div className="mode-switch">
         <label>
           <input
@@ -44,7 +44,7 @@ function App() {
         </label>
       </div>
 
-      {/* Настройки для пары */}
+      {/* Настройки для пары: имена и даты рождения */}
       {mode === "couple" && (
         <div className="couple-settings">
           <div>
@@ -84,16 +84,16 @@ function App() {
         </button>
       </div>
 
+      {/* Сам календарь жизни */}
       <LifeCalendar
-  mode={mode}
-  shape={shape}
-  person1={person1}
-  person2={person2}
-  maxAge={86}
-/>
+        mode={mode}
+        shape={shape}
+        person1={person1}
+        person2={person2}
+        maxAge={86}
+      />
 
-
-      {/* Мотивирующая фраза */}
+      {/* Ввод мотивирующей фразы (отображается снизу) */}
       <input
         className="motto"
         value={motto}
@@ -101,7 +101,7 @@ function App() {
         placeholder="Введите мотивирующую фразу"
       />
 
-      {/* Кнопка для будущей покупки/скачивания */}
+      {/* Кнопка для скачивания (экспорт добавим позже) */}
       <button className="download-btn" disabled>
         Скачать PNG или PDF (скоро)
       </button>

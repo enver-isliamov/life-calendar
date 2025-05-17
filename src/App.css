@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f8fa;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.surname, .motto {
+  width: 100%;
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.mode-switch, .shape-switch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.couple-settings {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.couple-settings input[type="date"] {
+  width: 120px;
+}
+
+.shape-switch button {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid #b0e0e6;
+  background: #e0f7fa;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.shape-switch .active {
+  background: #b0e0e6;
+  font-weight: bold;
+}
+
+.calendar-placeholder {
+  margin: 24px 0;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  background: #f4f8fb;
+  border-radius: 8px;
+}
+
+.download-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 1.1em;
+  background: #4dd0e1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

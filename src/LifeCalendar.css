@@ -1,3 +1,5 @@
+/* Стили для компонента LifeCalendar */
+
 .life-calendar {
   overflow-x: auto;
   background: #f4f8fb;
@@ -33,26 +35,32 @@
   transition: border-radius 0.2s, background 0.2s;
 }
 
+/* Кружки */
 .calendar-cell.circle {
   border-radius: 50%;
 }
 
+/* Скругленные квадратики */
 .calendar-cell.rounded {
   border-radius: 5px;
 }
 
+/* Общие ячейки для пары */
 .calendar-cell.shared {
   background: #b0e0e6;
 }
 
+/* Только для первого партнера (старше) */
 .calendar-cell.partner1 {
   background: #f0e6b0;
 }
 
+/* Только для второго партнера (младше) */
 .calendar-cell.partner2 {
   background: #e6b0e0;
 }
 
+/* Прожитые недели */
 .calendar-cell.past {
   filter: brightness(0.6);
   border: 1px solid #888;

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/life-calendar/static/css/main.2d7aa39e.css",
+    "main.js": "/life-calendar/static/js/main.15b3a11c.js",
+    "index.html": "/life-calendar/index.html",
+    "main.2d7aa39e.css.map": "/life-calendar/static/css/main.2d7aa39e.css.map",
+    "main.15b3a11c.js.map": "/life-calendar/static/js/main.15b3a11c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d7aa39e.css",
+    "static/js/main.15b3a11c.js"
+  ]
+}

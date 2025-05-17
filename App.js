@@ -84,11 +84,14 @@ function App() {
         </button>
       </div>
 
-      {/* Здесь будет сам календарь */}
-      <div className="calendar-placeholder">
-        {/* На следующих шагах сюда добавим компонент календаря */}
-        <p>Здесь появится календарь!</p>
-      </div>
+      <LifeCalendar
+  mode={mode}
+  shape={shape}
+  person1={person1}
+  person2={person2}
+  maxAge={86}
+/>
+
 
       {/* Мотивирующая фраза */}
       <input

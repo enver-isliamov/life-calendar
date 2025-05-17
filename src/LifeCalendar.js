@@ -1,13 +1,14 @@
+// Компонент LifeCalendar: строит календарь жизни по неделям для одного или пары
 import React from "react";
 import "./LifeCalendar.css";
 
-// Вспомогательная функция для вычисления возраста по дате рождения и году
+// Вспомогательная функция: вычисляет возраст по дате рождения и году
 function getAge(birthDate, year) {
   const birth = new Date(birthDate);
   return year - birth.getFullYear();
 }
 
-// Вспомогательная функция для вычисления количества недель между двумя датами
+// Вспомогательная функция: возвращает номер недели в году для даты
 function getWeekNumber(date) {
   const start = new Date(date.getFullYear(), 0, 1);
   const diff = (date - start + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60000));
@@ -20,7 +21,7 @@ export default function LifeCalendar({
   shape,
   person1,
   person2,
-  maxAge = 86 // Максимальный возраст для календаря
+  maxAge = 86
 }) {
   // Получаем даты рождения
   const dob1 = new Date(person1.dob);
@@ -33,7 +34,7 @@ export default function LifeCalendar({
   // Для текущей даты (подсветка прожитых недель)
   const now = new Date();
 
-  // Генерируем массив лет
+  // Массив лет для отображения строк календаря
   const years = [];
   for (let year = startYear; year <= endYear; year++) {
     years.push(year);
@@ -55,7 +56,7 @@ export default function LifeCalendar({
       {/* Основная сетка */}
       <div className="calendar-body">
         {years.map((year, idx) => {
-          // Возраст для каждого
+          // Возраст для каждого партнера
           const age1 = getAge(dob1, year);
           const age2 = dob2 ? getAge(dob2, year) : null;
 

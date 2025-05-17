@@ -1,0 +1,59 @@
+.life-calendar {
+  overflow-x: auto;
+  background: #f4f8fb;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.calendar-header, .calendar-row {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-label {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #789;
+  text-align: center;
+  min-width: 32px;
+  margin-right: 2px;
+}
+
+.year-label { width: 56px; }
+.age-label { width: 48px; }
+.month-label { width: 24px; }
+
+.calendar-cell {
+  width: 12px;
+  height: 12px;
+  margin: 1.5px;
+  background: #e0e0e0;
+  display: inline-block;
+  transition: border-radius 0.2s, background 0.2s;
+}
+
+.calendar-cell.circle {
+  border-radius: 50%;
+}
+
+.calendar-cell.rounded {
+  border-radius: 5px;
+}
+
+.calendar-cell.shared {
+  background: #b0e0e6;
+}
+
+.calendar-cell.partner1 {
+  background: #f0e6b0;
+}
+
+.calendar-cell.partner2 {
+  background: #e6b0e0;
+}
+
+.calendar-cell.past {
+  filter: brightness(0.6);
+  border: 1px solid #888;
+}
